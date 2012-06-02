@@ -1,0 +1,32 @@
+XBRLAIH - O criador de instâncias XBRL para o sistema de AIHs do SUS
+=====================================================================
+
+Este programa gera a prévia do relatório mensal de faturamento dos 
+hospitais conveniados ao SUS. Ele faz uso das informações disponíveis nos 
+arquivos de exportação do programa SISAIH e das competências disponibilizadas
+gratuitamente pelo DATASUS para gerar a prévia. Para facilitar a visualização, 
+ele também cria um relatório em html para cada instância XBRL gerada.
+
+--------------------------------------------------------------------------------
+
+=== Copyright & Licença ===
+
+Lucas Lira Gomes (x8lucas8x@gmail.com)
+Raony Benjamim de Assis Alves (raonybenjamin@gmail.com)
+
+--------------------------------------------------------------------------------
+
+DEPENDENCIAS
+============
+
+    * Qt 4.7 libraries (ou mais novo)
+      http://qt.nokia.com/downloads/downloads#qt-lib
+
+--------------------------------------------------------------------------------
+
+INSTRUCOES PARA INSTALACAO
+==========================
+
+-) qmake
+-) make
+-) make install (pode precisar ser root)

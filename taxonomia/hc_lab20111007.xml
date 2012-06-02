@@ -1,0 +1,68 @@
+<link:linkbase xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:link="http://www.xbrl.org/2003/linkbase">
+	<link:labelLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+		<link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="id_element71" xlink:to="label15"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element7" xlink:label="id_element71"/>
+		<link:label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="label15" xml:lang="br">totais</link:label>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element7" xlink:label="id_element7"/>
+		<link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="id_element622" xlink:to="label14"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element62" xlink:label="id_element622"/>
+		<link:label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="label14" xml:lang="br">TotalGeral</link:label>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element62" xlink:label="id_element621"/>
+		<link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="id_element422" xlink:to="label13"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element42" xlink:label="id_element422"/>
+		<link:label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="label13" xml:lang="br">Total MAC</link:label>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element42" xlink:label="id_element421"/>
+		<link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="id_element322" xlink:to="label12"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element32" xlink:label="id_element322"/>
+		<link:label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="label12" xml:lang="br">Total Atenção Básica</link:label>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element32" xlink:label="id_element321"/>
+		<link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="id_element222" xlink:to="label11"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element22" xlink:label="id_element222"/>
+		<link:label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="label11" xml:lang="br">Total FAEC</link:label>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element22" xlink:label="id_element221"/>
+		<link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="id_element11" xlink:to="label10"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element1" xlink:label="id_element11"/>
+		<link:label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="label10" xml:lang="br">Média Complexidade</link:label>
+		<link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="id_element62" xlink:to="label9"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element6" xlink:label="id_element62"/>
+		<link:label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="label9" xml:lang="br">Complexidade do Financiamento</link:label>
+		<link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="id_element211" xlink:to="label8"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element21" xlink:label="id_element211"/>
+		<link:label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="label8" xml:lang="br">Alta Complexidade</link:label>
+		<link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="id_element22" xlink:to="label7"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element2" xlink:label="id_element22"/>
+		<link:label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="label7" xml:lang="br">Atenção Básica</link:label>
+		<link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="id_element32" xlink:to="label6"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element3" xlink:label="id_element32"/>
+		<link:label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="label6" xml:lang="br">Média e Alta complexidade</link:label>
+		<link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="id_element52" xlink:to="label5"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element5" xlink:label="id_element52"/>
+		<link:label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="label5" xml:lang="br">Total</link:label>
+		<link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="id_element42" xlink:to="label4"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element4" xlink:label="id_element42"/>
+		<link:label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="label4" xml:lang="br">FAEC</link:label>
+		<link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="id_element611" xlink:to="label3"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element61" xlink:label="id_element611"/>
+		<link:label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="label3" xml:lang="br">Atenção Básica</link:label>
+		<link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="id_element511" xlink:to="label2"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element51" xlink:label="id_element511"/>
+		<link:label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="label2" xml:lang="br">Media e Alta Complexidade</link:label>
+		<link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="id_element411" xlink:to="label1"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element41" xlink:label="id_element411"/>
+		<link:label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="label1" xml:lang="br">Total</link:label>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element1" xlink:label="id_element1"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element6" xlink:label="id_element6"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element21" xlink:label="id_element21"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element2" xlink:label="id_element2"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element3" xlink:label="id_element3"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element5" xlink:label="id_element5"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element4" xlink:label="id_element4"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element61" xlink:label="id_element61"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element51" xlink:label="id_element51"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element41" xlink:label="id_element41"/>
+		<link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="id_element311" xlink:to="label"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element31" xlink:label="id_element311"/>
+		<link:label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="label" xml:lang="br">FAEC</link:label>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element31" xlink:label="id_element31"/>
+	</link:labelLink>
+</link:linkbase>

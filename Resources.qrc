@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/folhaDeEstilo">
+        <file alias="html">folhaDeEstilo/html.xq</file>
+    </qresource>
+    <qresource prefix="/taxonomia">
+        <file alias="taxonomia">taxonomia/hc_20111007.xsd</file>
+        <file alias="calculationLinkBase">taxonomia/hc_cal20111007.xml</file>
+        <file alias="definitionLinkBase">taxonomia/hc_def20111007.xml</file>
+        <file alias="labelLinkBase">taxonomia/hc_lab20111007.xml</file>
+        <file alias="presentationLinkBase">taxonomia/hc_pre20111007.xml</file>
+        <file alias="referenceLinkBase">taxonomia/hc_ref20111007.xml</file>
+    </qresource>
+</RCC>

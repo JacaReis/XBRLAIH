@@ -1,0 +1,51 @@
+<link:linkbase xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:link="http://www.xbrl.org/2003/linkbase">
+	<link:presentationLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+		<link:presentationArc order="4.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="id_element74" xlink:to="id_element42"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element42" xlink:label="id_element42"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element7" xlink:label="id_element74"/>
+		<link:presentationArc order="3.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="id_element73" xlink:to="id_element32"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element32" xlink:label="id_element32"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element7" xlink:label="id_element73"/>
+		<link:presentationArc order="2.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="id_element72" xlink:to="id_element22"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element22" xlink:label="id_element22"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element7" xlink:label="id_element72"/>
+		<link:presentationArc order="1.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="id_element71" xlink:to="id_element621"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element62" xlink:label="id_element621"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element7" xlink:label="id_element71"/>
+		<link:presentationArc order="3.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="id_element63" xlink:to="id_element7"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element7" xlink:label="id_element7"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element6" xlink:label="id_element63"/>
+		<link:presentationArc order="4.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="id_element214" xlink:to="id_element41"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element41" xlink:label="id_element41"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element21" xlink:label="id_element214"/>
+		<link:presentationArc order="3.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="id_element213" xlink:to="id_element31"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element31" xlink:label="id_element31"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element21" xlink:label="id_element213"/>
+		<link:presentationArc order="2.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="id_element212" xlink:to="id_element51"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element51" xlink:label="id_element51"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element21" xlink:label="id_element212"/>
+		<link:presentationArc order="1.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="id_element211" xlink:to="id_element611"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element61" xlink:label="id_element611"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element21" xlink:label="id_element211"/>
+		<link:presentationArc order="2.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="id_element62" xlink:to="id_element21"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element21" xlink:label="id_element21"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element6" xlink:label="id_element62"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element1" xlink:label="id_element15"/>
+		<link:presentationArc order="4.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="id_element14" xlink:to="id_element5"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element5" xlink:label="id_element5"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element1" xlink:label="id_element14"/>
+		<link:presentationArc order="3.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="id_element13" xlink:to="id_element4"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element4" xlink:label="id_element4"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element1" xlink:label="id_element13"/>
+		<link:presentationArc order="2.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="id_element12" xlink:to="id_element3"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element3" xlink:label="id_element3"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element1" xlink:label="id_element12"/>
+		<link:presentationArc order="1.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="id_element11" xlink:to="id_element2"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element2" xlink:label="id_element2"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element1" xlink:label="id_element11"/>
+		<link:presentationArc order="1.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="id_element61" xlink:to="id_element1"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element1" xlink:label="id_element1"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element6" xlink:label="id_element61"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element6" xlink:label="id_element6"/>
+	</link:presentationLink>
+</link:linkbase>

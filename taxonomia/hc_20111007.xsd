@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 sp1 (http://www.altova.com) by End User (free.org) -->
+<xs:schema elementFormDefault="qualified" targetNamespace="http://www.hc.com" xmlns:n1="http://www.hc.com" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xl="http://www.xbrl.org/2003/XLink" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:ref="http://www.xbrl.org/2004/ref" xmlns:xbrldt="http://xbrl.org/2005/xbrldt">
+	<xs:annotation>
+		<xs:appinfo>
+			<link:roleType id="totalGeral" roleURI="http://www.hc.com.br/schema/role/totalGeral">
+				<link:definition>totalGeral</link:definition>
+				<link:usedOn>link:calculationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:presentationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType id="totalMediaAltaComplexidade" roleURI="http://www.hc.com.br/schema/role/totalMediaAltaComplexidade">
+				<link:definition>totalMediaAltaComplexidade</link:definition>
+				<link:usedOn>link:calculationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:presentationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType id="totalAtencaoBasica" roleURI="http://www.hc.com.br/schema/role/totalAtencaoBasica">
+				<link:definition>totalAtencaoBasica</link:definition>
+				<link:usedOn>link:calculationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:presentationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType id="totalFaec" roleURI="http://www.hc.com.br/schema/role/totalFaec">
+				<link:definition>totalFaec</link:definition>
+				<link:usedOn>link:calculationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:presentationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType id="totais" roleURI="http://www.hc.com.br/schema/role/totais">
+				<link:definition>totais</link:definition>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:presentationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType id="valorAltaCTotal" roleURI="http://www.hc.com.br/schema/role/valorAltaCTotal">
+				<link:definition>valorAltaCTotal</link:definition>
+				<link:usedOn>link:calculationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:presentationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType id="valorAltaCFaec" roleURI="http://www.hc.com.br/schema/role/valorAltaCFaec">
+				<link:definition>valorAltaCFaec</link:definition>
+				<link:usedOn>link:calculationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:presentationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType id="valorAltaCMediaAltaComplexidade" roleURI="http://www.hc.com.br/schema/role/valorAltaCMediaAltaComplexidade">
+				<link:definition>valorAltaCMediaAltaComplexidade</link:definition>
+				<link:usedOn>link:calculationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:presentationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType id="valorAltaCAtencaoBasica" roleURI="http://www.hc.com.br/schema/role/valorAltaCAtencaoBasica">
+				<link:definition>valorAltaCAtencaoBasica</link:definition>
+				<link:usedOn>link:calculationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:presentationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType id="AltaComplexidade" roleURI="http://www.hc.com.br/schema/role/AltaComplexidade">
+				<link:definition>AltaComplexidade</link:definition>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:presentationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType id="complexidadeFinanciamento" roleURI="http://www.hc.com.br/schema/role/complexidadeFinanciamento">
+				<link:definition>complexidadeFinanciamento</link:definition>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:presentationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType id="mediaComplexidade" roleURI="http://www.hc.com.br/schema/role/mediaComplexidade">
+				<link:definition>mediaComplexidade</link:definition>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:presentationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType id="valorMediaCAtencaoBasica" roleURI="http://www.hc.com.br/schema/role/valorMediaCAtencaoBasica">
+				<link:definition>valorMediaCAtencaoBasica</link:definition>
+				<link:usedOn>link:calculationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:presentationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType id="valorMediaCMediaAltaComplexidade" roleURI="http://www.hc.com.br/schema/role/valorMediaCMediaAltaComplexidade">
+				<link:definition>valorMediaCMediaAltaComplexidade</link:definition>
+				<link:usedOn>link:calculationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:presentationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType id="valorMediaCFaec" roleURI="http://www.hc.com.br/schema/role/valorMediaCFaec">
+				<link:definition>valorMediaCFaec</link:definition>
+				<link:usedOn>link:calculationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:presentationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType id="valorMediaCTotal" roleURI="http://www.hc.com.br/schema/role/valorMediaCTotal">
+				<link:definition>valorMediaCTotal</link:definition>
+				<link:usedOn>link:calculationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:presentationLink</link:usedOn>
+			</link:roleType>
+			<link:linkbaseRef xlink:type="simple" xlink:role="http://www.xbrl.org/2003/role/referenceLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="hc_ref20111007.xml"/>
+			<link:linkbaseRef xlink:type="simple" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="hc_lab20111007.xml"/>
+			<link:linkbaseRef xlink:type="simple" xlink:role="http://www.xbrl.org/2003/role/calculationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="hc_cal20111007.xml"/>
+			<link:linkbaseRef xlink:type="simple" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="hc_def20111007.xml"/>
+			<link:linkbaseRef xlink:type="simple" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="hc_pre20111007.xml"/>
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+	<xs:import namespace="http://www.xbrl.org/2004/ref" schemaLocation="http://www.xbrl.org/2004/ref-2004-08-10.xsd"/>
+	<xs:import namespace="http://xbrl.org/2005/xbrldt" schemaLocation="http://www.xbrl.org/2005/xbrldt-2005.xsd"/>
+	<xs:element name="totais" id="id_element7" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="true" abstract="false" xbrli:periodType="duration"/>
+	<xs:element name="totalGeral" id="id_element62" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" abstract="false" xbrli:periodType="duration"/>
+	<xs:element name="totalMediaAltaComplexidade" id="id_element42" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" abstract="false" xbrli:periodType="duration"/>
+	<xs:element name="totalAtencaoBasica" id="id_element32" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" abstract="false" xbrli:periodType="duration"/>
+	<xs:element name="totalFaec" id="id_element22" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" abstract="false" xbrli:periodType="duration"/>
+	<xs:element name="valorAltaCAtencaoBasica" id="id_element61" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" abstract="false" xbrli:periodType="duration"/>
+	<xs:element name="valorAltaCMediaAltaComplexidade" id="id_element51" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" abstract="false" xbrli:periodType="duration"/>
+	<xs:element name="valorAltaCTotal" id="id_element41" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" abstract="false" xbrli:periodType="duration"/>
+	<xs:element name="valorAltaCFaec" id="id_element31" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" abstract="false" xbrli:periodType="duration"/>
+	<xs:element name="altaComplexidade" id="id_element21" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" abstract="false" xbrli:periodType="duration"/>
+	<xs:element name="complexidadeFinanciamento" id="id_element6" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="true" abstract="true" xbrli:periodType="duration"/>
+	<xs:element name="valorMediaCTotal" id="id_element5" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" abstract="false" xbrli:periodType="duration"/>
+	<xs:element name="valorMediaCFaec" id="id_element4" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" abstract="false" xbrli:periodType="duration"/>
+	<xs:element name="valorMediaCMediaAltaComplexidade" id="id_element3" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" abstract="false" xbrli:periodType="duration"/>
+	<xs:element name="valorMediaCAtencaoBasica" id="id_element2" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" abstract="false" xbrli:periodType="duration"/>
+	<xs:element name="mediaComplexidade" id="id_element1" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="true" abstract="false" xbrli:periodType="duration"/>
+</xs:schema>

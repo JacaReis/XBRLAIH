@@ -1,0 +1,55 @@
+<link:linkbase xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:link="http://www.xbrl.org/2003/linkbase">
+	<link:calculationLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+		<link:calculationArc order="2.0" weight="1.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="id_element423" xlink:to="id_element33"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element3" xlink:label="id_element33"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element42" xlink:label="id_element423"/>
+		<link:calculationArc order="1.0" weight="1.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="id_element422" xlink:to="id_element512"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element51" xlink:label="id_element512"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element42" xlink:label="id_element422"/>
+		<link:calculationArc order="2.0" weight="1.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="id_element323" xlink:to="id_element21"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element2" xlink:label="id_element21"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element32" xlink:label="id_element323"/>
+		<link:calculationArc order="1.0" weight="1.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="id_element322" xlink:to="id_element611"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element61" xlink:label="id_element611"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element32" xlink:label="id_element322"/>
+		<link:calculationArc order="2.0" weight="1.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="id_element223" xlink:to="id_element43"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element4" xlink:label="id_element43"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element22" xlink:label="id_element223"/>
+		<link:calculationArc order="1.0" weight="1.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="id_element222" xlink:to="id_element311"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element31" xlink:label="id_element311"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element22" xlink:label="id_element222"/>
+		<link:calculationArc order="3.0" weight="1.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="id_element623" xlink:to="id_element421"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element42" xlink:label="id_element421"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element62" xlink:label="id_element623"/>
+		<link:calculationArc order="2.0" weight="1.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="id_element622" xlink:to="id_element321"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element32" xlink:label="id_element321"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element62" xlink:label="id_element622"/>
+		<link:calculationArc order="1.0" weight="1.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="id_element621" xlink:to="id_element221"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element22" xlink:label="id_element221"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element62" xlink:label="id_element621"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element62" xlink:label="id_element62"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element42" xlink:label="id_element42"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element32" xlink:label="id_element32"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element22" xlink:label="id_element22"/>
+		<link:calculationArc order="3.0" weight="1.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="id_element413" xlink:to="id_element31"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element31" xlink:label="id_element31"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element41" xlink:label="id_element413"/>
+		<link:calculationArc order="2.0" weight="1.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="id_element412" xlink:to="id_element511"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element51" xlink:label="id_element511"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element41" xlink:label="id_element412"/>
+		<link:calculationArc order="1.0" weight="1.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="id_element411" xlink:to="id_element61"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element61" xlink:label="id_element61"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element41" xlink:label="id_element411"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element41" xlink:label="id_element41"/>
+		<link:calculationArc order="3.0" weight="1.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="id_element53" xlink:to="id_element4"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element4" xlink:label="id_element4"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element5" xlink:label="id_element53"/>
+		<link:calculationArc order="2.0" weight="1.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="id_element52" xlink:to="id_element3"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element3" xlink:label="id_element3"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element5" xlink:label="id_element52"/>
+		<link:calculationArc order="1.0" weight="1.0" xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="id_element51" xlink:to="id_element2"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element2" xlink:label="id_element2"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element5" xlink:label="id_element51"/>
+		<link:loc xlink:type="locator" xlink:href="hc_20111007.xsd#id_element5" xlink:label="id_element5"/>
+	</link:calculationLink>
+</link:linkbase>

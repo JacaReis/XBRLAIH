@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>350</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>320</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>XBRLAIH 1.0</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QStackedWidget" name="modeStackWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="modeStackWidgetPage1">
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <property name="margin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QStackedWidget" name="mainStackWidget">
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="mainStackWidgetPage1">
+           <layout class="QVBoxLayout" name="verticalLayout_9">
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="titleLabel">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; text-decoration: underline;&quot;&gt;XBLAIH 1.0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="descriptionLabel">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bem-vindo ao XBRLAIH. Esse software é capaz de gerar a prévia do faturamento dos hospitais conveniados ao SUS, bastando seguir os próximos passos. &lt;/p&gt;&lt;p&gt;Clique no botão &amp;quot;Continuar&amp;quot;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+              <property name="margin">
+               <number>22</number>
+              </property>
+              <property name="openExternalLinks">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="mainStackWidgetPage2">
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QLabel" name="titleLabel_2">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; text-decoration: underline;&quot;&gt;Escolha o arquivo de exportação do SISAIH&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="descriptionLabel_2">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clique no botão &amp;quot;Abrir&amp;quot; e selecione o arquivo de exportação, referente ao mês desejado, nos seus arquivos.&lt;/p&gt;&lt;p&gt;Se você ainda não gerou o arquivo de exportação, então abra o software SISAIH e gere-o.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;Importante: &lt;/span&gt;&lt;span style=&quot; font-family:'arial'; font-size:small; color:#000000;&quot;&gt;É necessário que a competência escolhida e o arquivo de exportação sejam do mesmo período, pois o SUS costuma modificar os custos dos procedimentos médicos a cada nova competência. Se esta precaução não for tomada, então os valores gerados no relatório da prévia serão incoerentes.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+              <property name="margin">
+               <number>22</number>
+              </property>
+              <property name="openExternalLinks">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <item>
+               <widget class="QLabel" name="backupLabel">
+                <property name="toolTip">
+                 <string>Você deve selecionar o backup, gerado pelo programa SISAIH, que você deseja usar para gerar uma instância XBRL.</string>
+                </property>
+                <property name="statusTip">
+                 <string>Escolha o arquivo de backup para o qual você deseja gerar uma instância XBRL.</string>
+                </property>
+                <property name="text">
+                 <string>Arquivo de exportação.:</string>
+                </property>
+                <property name="textInteractionFlags">
+                 <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="backupLineEdit">
+                <property name="toolTip">
+                 <string>Você deve selecionar o backup, gerado pelo programa SISAIH, que você deseja usar para gerar uma instância XBRL.</string>
+                </property>
+                <property name="statusTip">
+                 <string>Escolha o arquivo de backup para o qual você deseja gerar uma instância XBRL.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="abrirBackupPushButton">
+                <property name="statusTip">
+                 <string>Escolha o arquivo de backup do SISAIH para o qual você deseja gerar uma instância XBRL.</string>
+                </property>
+                <property name="text">
+                 <string>Abrir</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="mainStackWidgetPage3">
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QLabel" name="titleLabel_3">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; text-decoration: underline;&quot;&gt;Escolha o diretório da competência&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="descriptionLabel_3">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clique no botão &amp;quot;Abrir&amp;quot; e escolha o diretório em que está extraida a competência, referente ao mês desejado, nos seus arquivos.&lt;/p&gt;&lt;p&gt;Se você ainda não extraiu a competência desejada, então clique &lt;a href=&quot;http://sigtap.datasus.gov.br/tabela-unificada/app/download.jsp&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;aqui&lt;/span&gt;&lt;/a&gt;. Escolha a competência desejada, baixe-a e extrai-a em um diretório de sua escolha.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;Importante: &lt;/span&gt;&lt;span style=&quot; font-family:'arial'; font-size:small; color:#000000;&quot;&gt;É necessário que a competência escolhida e o arquivo de exportação sejam do mesmo período, pois o SUS costuma modificar os custos dos procedimentos médicos a cada nova competência. Se esta precaução não for tomada, então os valores gerados no relatório da prévia serão incoerentes.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+              <property name="margin">
+               <number>22</number>
+              </property>
+              <property name="openExternalLinks">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <widget class="QLabel" name="competenciaLabel">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Você deve baixar a competência, referente ao mesmo período do arquivo de exportação, no site do SIGTAP e selecionar o diretório em que ela foi extraída.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="statusTip">
+                 <string>Escolha o diretório em que a competência escolhida foi extraída.</string>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Diretório da competência.:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="competenciaLineEdit">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Você deve baixar a competência, referente ao mesmo período do arquivo de exportação, no site do SIGTAP e selecionar o diretório em que ela foi extraída.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="statusTip">
+                 <string>Escolha o diretório em que a competência escolhida foi extraída.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="abrirCompetenciaPushButton">
+                <property name="statusTip">
+                 <string>Escolha o diretório em que a competência escolhida foi extraída.</string>
+                </property>
+                <property name="text">
+                 <string>Abrir</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="mainStackWidgetPage4">
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <item>
+             <widget class="QLabel" name="titleLabel_4">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; text-decoration: underline;&quot;&gt;Relatório&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="descriptionLabel_4">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Agora que você já forneceu os arquivos necessários, clique no botão &amp;quot;Gerar relatório&amp;quot;.&lt;/p&gt;&lt;p&gt;Após isso clique no botão &amp;quot;Continuar&amp;quot;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+              <property name="margin">
+               <number>22</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="gerarRelatorioPushButton">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="statusTip">
+               <string>Clique aqui para gerar o relatório da prévia de gastos</string>
+              </property>
+              <property name="text">
+               <string>Gerar relatório da prévia de faturamento</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="mainStackWidgetPage5">
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <widget class="QLabel" name="titleLabel_5">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; text-decoration: underline;&quot;&gt;Relatório&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWebView" name="webView">
+              <property name="url">
+               <url>
+                <string>about:blank</string>
+               </url>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <widget class="QPushButton" name="abrirRelatorioPushButton">
+                <property name="statusTip">
+                 <string>Clique aqui para abrir este relatório em seu navegador web padrão</string>
+                </property>
+                <property name="text">
+                 <string>Abrir relatório externamente</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="imprimirRelatorioPushButton">
+                <property name="statusTip">
+                 <string>Clique aqui para imprimir este relatório</string>
+                </property>
+                <property name="text">
+                 <string>Imprimir relatório</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="navegacaoFrame">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QPushButton" name="voltarPushButton">
+               <property name="statusTip">
+                <string>Clique aqui para voltar para o passo anterior</string>
+               </property>
+               <property name="text">
+                <string>Voltar</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="continuarPushButton">
+               <property name="statusTip">
+                <string>Clique aqui para ir para o próximo passo</string>
+               </property>
+               <property name="text">
+                <string>Continuar</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="modeStackWidgetPage2">
+       <layout class="QVBoxLayout" name="verticalLayout_20">
+        <item>
+         <widget class="QGroupBox" name="saidaGroupBox">
+          <property name="title">
+           <string>Log</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QTextEdit" name="saidaTextEdit">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="verLogpushButton">
+      <property name="statusTip">
+       <string>Clique aqui para ter mais detalhes sobre o que o programa está fazendo</string>
+      </property>
+      <property name="text">
+       <string>Ver log de funcionamento</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QWebView</class>
+   <extends>QWidget</extends>
+   <header>QtWebKit/QWebView</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
