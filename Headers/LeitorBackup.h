@@ -44,7 +44,7 @@ signals:
 
 private:
     QFile *m_arquivoBackup;
-    QTextStream *m_textStream;
+    QTextStream *m_backupStream;
     QList<Aih *> m_aihs;
 
     void inicializarAih( Aih* aih );
