@@ -94,7 +94,7 @@ void MainWindow::on_gerarRelatorioPushButton_clicked()
         extrairResource( QUrl( "taxonomia/hc_lab20111007.xml" ), ":/taxonomia/labelLinkBase" ) &&
         extrairResource( QUrl( "taxonomia/hc_pre20111007.xml" ), ":/taxonomia/presentationLinkBase" ) &&
         extrairResource( QUrl( "taxonomia/hc_ref20111007.xml" ), ":/taxonomia/referenceLinkBase" ) &&
-        extrairResource( QUrl( "folhaDeEstilo/html.xq" ), ":/folhaDeEstilo/html" )
+        extrairResource( QUrl( "html.xq" ), ":/folhaDeEstilo/html" )
       )
     {
         ui->saidaTextEdit->append( tr( "--- Arquivos dos resources extraídos com sucesso" ) );
@@ -262,7 +262,7 @@ void MainWindow::xbrlPreenchido()
 
     QString localizacaoSaida = "relatorio";
 
-    if ( aplicarFolhaEstilo( QString( "%1.html" ).arg( localizacaoSaida ), "folhaDeEstilo/html.xq" ) )
+    if ( aplicarFolhaEstilo( QString( "%1.html" ).arg( localizacaoSaida ), "html.xq" ) )
     {
         ui->continuarPushButton->setEnabled( true );
         ui->gerarRelatorioPushButton->setEnabled( false );
@@ -303,7 +303,7 @@ bool MainWindow::aplicarFolhaEstilo( const QString localizacaoArquivoSaida, cons
             if( xq.isOpen() )
             {
                 QXmlQuery query;
-                query.bindVariable( "inputDocument", QVariant( QUrl( qApp->applicationFilePath() ).resolved( QUrl( "instancia.xml" ) ) ) );
+                query.bindVariable( "inputDocument", QVariant( QUrl( "instancia.xml" ) ) );
                 query.setQuery( &xq , QUrl::fromLocalFile( localizacaoArquivoXq ) );
 
                 if( query.isValid() )
@@ -332,10 +332,10 @@ bool MainWindow::extrairResource( const QUrl localizacaoArquivo, const QString n
 
     if( !resource.exists() )
     {
-        QDir diretorio( resource.path() );
+        QDir diretorio( resource.dir() );
 
         if( !diretorio.exists() )
-            if( !diretorio.mkpath( resource.path() ) )
+            if( !diretorio.mkpath( diretorio.path() ) )
                 return false;
 
         QFile arquivoResource( nomeRecurso );
