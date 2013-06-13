@@ -173,15 +173,15 @@ double GeradorEstatistica::altaComplexidadeTotalMediaAltaComplexidade()
     qDebug() << "altaComplexidadeTotalMediaAltaComplexidade() " << resultado;
     return resultado;
 }
-
+// alterando a posição inicial que ele começa a ler a data
 int GeradorEstatistica::anoCompetencia()
 {
-    return m_procedimentos.first()->dataCompetencia().mid( 0, 4 ).toInt();
+    return m_procedimentos.first()->dataCompetencia().mid( 4, 4 ).toInt();
 }
 
 int GeradorEstatistica::mesCompetencia()
 {
-    return m_procedimentos.first()->dataCompetencia().mid( 4, 2 ).toInt();
+    return m_procedimentos.first()->dataCompetencia().mid( 8, 2 ).toInt();
 }
 
 int GeradorEstatistica::anoApresentacaoLote()

@@ -81,7 +81,10 @@ void LeitorProcedimento::inicializarProcedimento( Procedimento *procedimento )
     procedimento->setValorSp( converterStrParaDouble( m_procedimentoStream->read( 10 ) ) );
     procedimento->setCodigoFinanciamento( m_procedimentoStream->read( 2 ) );
     procedimento->setCodigoRubrica( m_procedimentoStream->read( 6 ) );
-    procedimento->setDataCompetencia( m_procedimentoStream->read( 6 ) );
+    //verificando se a data da Competencia tem valores descartaveis.
+    
+        procedimento->setDataCompetencia( m_procedimentoStream->read( 10 ) );
+   
     m_procedimentoStream->read( 1 );
 }
 

@@ -37,6 +37,8 @@ public:
     QString codigoProcedimento() const { return m_codigoProcedimento; }
     QString quantidadeProcedimentos() const { return m_quantidadeProcedimentos; }
     QString competencia() const { return m_competencia; }
+    QString servico() const {return m_servico ; }
+    QString classificacao() const { return m_classificacao; }
 
     void setIndicadorDocumentoProfissional( QString valor );
     void setIdentificacaoProfissional( QString valor );
@@ -49,6 +51,8 @@ public:
     void setCodigoProcedimento( QString valor );
     void setQuantidadeProcedimentos( QString valor );
     void setCompetencia( QString valor );
+    void setServico (QString valor);
+    void setClassificacao (QString valor);
 
 private:
     QString m_indicadorDocumentoProfissional;
@@ -62,6 +66,8 @@ private:
     QString m_codigoProcedimento;
     QString m_quantidadeProcedimentos;
     QString m_competencia;
+    QString m_servico;
+    QString m_classificacao;
 };
 
 //Aih principal, de continuacao ou de longa permanencia
@@ -148,6 +154,10 @@ public:
     QString tipoMetodoContraceptivo2() const { return m_tipoMetodoContraceptivo2; }
     QString gestacaoAltoRisco() const { return m_gestacaoAltoRisco; }
     QString numeroInscricaoGestantePreNatal() const { return m_numeroInscricaoGestantePreNatal; }
+    QString telefonePacDDD() const {return m_telefonePacDDD; }
+    QString telefonePaciente() const {return m_telefonePaciente; }
+    QString justificativaCNSPac() const {return m_justificativaCNSPac; }
+
 
     void setNumeroLote( QString valor );
     void setQuantidadeLote( QString valor );
@@ -225,6 +235,9 @@ public:
     void setTipoMetodoContraceptivo2( QString valor );
     void setGestacaoAltoRisco( QString valor );
     void setNumeroInscricaoGestantePreNatal( QString valor );
+    void setTelefonePacDDD(QString valor);
+    void setTelefonePaciente(QString valor);
+    void setJustificativaCNSPac (QString valor);
 
 private:
     QString m_numeroLote;
@@ -305,6 +318,9 @@ private:
     QString m_gestacaoAltoRisco;
     QString m_numeroInscricaoGestantePreNatal;
     AihProcedimentosSecundarios *m_aihProcedimentosSecundarios;
+    QString m_telefonePacDDD;
+    QString m_telefonePaciente;
+    QString m_justificativaCNSPac;
 };
 
 #endif // AIH_H

@@ -95,6 +95,9 @@ Aih::Aih()
     , m_gestacaoAltoRisco( "" )
     , m_numeroInscricaoGestantePreNatal( "" )
     , m_aihProcedimentosSecundarios( new AihProcedimentosSecundarios[10] )
+    , m_telefonePacDDD("")
+    , m_telefonePaciente("")
+    , m_justificativaCNSPac("")
 {
 }
 
@@ -399,6 +402,8 @@ AihProcedimentosSecundarios::AihProcedimentosSecundarios()
     , m_codigoProcedimento( "" )
     , m_quantidadeProcedimentos( "" )
     , m_competencia( "" )
+    , m_servico("")
+    , m_classificacao("")
 {
 }
 
@@ -459,6 +464,16 @@ void AihProcedimentosSecundarios::setQuantidadeProcedimentos( QString valor )
 void AihProcedimentosSecundarios::setCompetencia( QString valor )
 {
     m_competencia = valor;
+}
+
+void AihProcedimentosSecundarios::setServico(QString valor)
+{
+    m_servico = valor;
+}
+
+void AihProcedimentosSecundarios::setClassificacao(QString valor)
+{
+    m_classificacao = valor;
 }
 
 void Aih::setSaidaUtiNeoNatal( QString valor )
@@ -554,4 +569,19 @@ void Aih::setGestacaoAltoRisco( QString valor )
 void Aih::setNumeroInscricaoGestantePreNatal( QString valor )
 {
     m_numeroInscricaoGestantePreNatal = valor;
+}
+
+void Aih::setTelefonePacDDD(QString valor)
+{
+    m_telefonePacDDD = valor;
+}
+
+void Aih::setTelefonePaciente(QString valor)
+{
+    m_telefonePaciente = valor;
+}
+
+void Aih::setJustificativaCNSPac(QString valor)
+{
+    m_justificativaCNSPac = valor;
 }

@@ -69,18 +69,23 @@ void LeitorBackup::lerAihs()
 void LeitorBackup::inicializarAih( Aih* aih )
 {
 
-    if ( m_backupStream->read( 95 ).length() != 95 )
+    if ( m_backupStream->read( 102 ).length() != 102 )
     {
         delete aih;
         return;
     }
     else
-        m_backupStream->seek( m_backupStream->pos() - 95 );
+        m_backupStream->seek( m_backupStream->pos() - 102 );
 
     //Parte comum para todos os registros de AIH
     aih->setNumeroLote( m_backupStream->read( 8 ) );
     aih->setQuantidadeLote( m_backupStream->read( 3 ) );
-    aih->setApresentacaoLote( m_backupStream->read( 6 ) );
+    //modificacao
+    QString ano_s = m_backupStream->read(4);
+    QString mes_s = m_backupStream->read(2);
+    aih->setApresentacaoLote( ano_s + mes_s);
+    int ano = ano_s.toInt();
+    int mes = mes_s.toInt();
     aih->setSequencialLote( m_backupStream->read( 3 ) );
     aih->setOrgaoEmissor( m_backupStream->read( 10 ) );
     aih->setCnesHospital( m_backupStream->read( 7 ) );
@@ -120,7 +125,9 @@ void LeitorBackup::inicializarAih( Aih* aih )
             aih->setDiagnosticoSecundario( m_backupStream->read( 4 ) );
             aih->setDiagnosticoCausasComplementares( m_backupStream->read( 4 ) );
             aih->setDiagnosticoCausaMorte( m_backupStream->read( 4 ) );
-            aih->setCodigoSolicitacaoLiberacao( m_backupStream->read( 3 ) );
+            //linha adicionada
+            m_backupStream->read( 3 ); //Filler
+            //aih->setCodigoSolicitacaoLiberacao( m_backupStream->read( 3 ) );
 
             //Paciente
             aih->setNomePaciente( m_backupStream->read( 70 ) );
@@ -131,7 +138,24 @@ void LeitorBackup::inicializarAih( Aih* aih )
             aih->setNomeResponsavelPaciente( m_backupStream->read( 70 ) );
             aih->setTipoDocumentoPaciente( m_backupStream->read( 1 ) );
             aih->setEtniaIndigena( m_backupStream->read( 4 ) );
+            //linha adicionada
+            //verificacao da data do backup
+            if(ano < 2012)
+            {
             m_backupStream->read( 7 ); //Filler
+
+            }else
+            {
+                if(mes < 8 && ano == 2012)
+                {
+                    m_backupStream->read( 7 ); //Filler
+                }else
+                {
+                    aih->setCodigoSolicitacaoLiberacao( m_backupStream->read(5));
+                    m_backupStream->read( 2 ); //Filler
+                }
+
+            }
 
             aih->setNumeroCartaoSaudePaciente( m_backupStream->read( 15 ) );
             aih->setNacionalidadePaciente( m_backupStream->read( 3 ) );
@@ -150,19 +174,63 @@ void LeitorBackup::inicializarAih( Aih* aih )
             aih->setNumeroLeito( m_backupStream->read( 4 ) );
 
             //Procedimentos secundarios/especiais
+            //Duas linhas adicionadas, as ultimas
+            //verificacao da data do backup
+            if(ano < 2012)
+            {
             for ( int i = 0; i < 10; ++i )
             {
-                aih->aihProcedimentosSecundarios( i )->setIndicadorDocumentoProfissional( m_backupStream->read( 1 ) );
-                aih->aihProcedimentosSecundarios( i )->setIdentificacaoProfissional( m_backupStream->read( 15 ) );
-                aih->aihProcedimentosSecundarios( i )->setCodigoCBO( m_backupStream->read( 6 ) );
-                aih->aihProcedimentosSecundarios( i )->setIndicadorEquipe( m_backupStream->read( 1 ) );
-                aih->aihProcedimentosSecundarios( i )->setIndicadorPrestadorServico( m_backupStream->read( 1 ) );
-                aih->aihProcedimentosSecundarios( i )->setIdentificacaoPrestadorServico( m_backupStream->read( 14 ) );
-                aih->aihProcedimentosSecundarios( i )->setIndicadorDocumentoExecutor( m_backupStream->read( 1 ) );
-                aih->aihProcedimentosSecundarios( i )->setIndentificacaoExecutor( m_backupStream->read( 15 ) );
-                aih->aihProcedimentosSecundarios( i )->setCodigoProcedimento( m_backupStream->read( 10 ) );
-                aih->aihProcedimentosSecundarios( i )->setQuantidadeProcedimentos( m_backupStream->read( 3 ) );
-                aih->aihProcedimentosSecundarios( i )->setCompetencia( m_backupStream->read( 6 ) );
+                    aih->aihProcedimentosSecundarios( i )->setIndicadorDocumentoProfissional( m_backupStream->read( 1 ) );
+                    aih->aihProcedimentosSecundarios( i )->setIdentificacaoProfissional( m_backupStream->read( 15 ) );
+                    aih->aihProcedimentosSecundarios( i )->setCodigoCBO( m_backupStream->read( 6 ) );
+                    aih->aihProcedimentosSecundarios( i )->setIndicadorEquipe( m_backupStream->read( 1 ) );
+                    aih->aihProcedimentosSecundarios( i )->setIndicadorPrestadorServico( m_backupStream->read( 1 ) );
+                    aih->aihProcedimentosSecundarios( i )->setIdentificacaoPrestadorServico( m_backupStream->read( 14 ) );
+                    aih->aihProcedimentosSecundarios( i )->setIndicadorDocumentoExecutor( m_backupStream->read( 1 ) );
+                    aih->aihProcedimentosSecundarios( i )->setIndentificacaoExecutor( m_backupStream->read( 15 ) );
+                    aih->aihProcedimentosSecundarios( i )->setCodigoProcedimento( m_backupStream->read( 10 ) );
+                    aih->aihProcedimentosSecundarios( i )->setQuantidadeProcedimentos( m_backupStream->read( 3 ) );
+                    aih->aihProcedimentosSecundarios( i )->setCompetencia( m_backupStream->read( 6 ) );
+            }
+            }else
+            {
+                if(mes < 8 && ano == 2012)
+                {
+                    for ( int i = 0; i < 10; ++i )
+                    {
+                        aih->aihProcedimentosSecundarios( i )->setIndicadorDocumentoProfissional( m_backupStream->read( 1 ) );
+                        aih->aihProcedimentosSecundarios( i )->setIdentificacaoProfissional( m_backupStream->read( 15 ) );
+                        aih->aihProcedimentosSecundarios( i )->setCodigoCBO( m_backupStream->read( 6 ) );
+                        aih->aihProcedimentosSecundarios( i )->setIndicadorEquipe( m_backupStream->read( 1 ) );
+                        aih->aihProcedimentosSecundarios( i )->setIndicadorPrestadorServico( m_backupStream->read( 1 ) );
+                        aih->aihProcedimentosSecundarios( i )->setIdentificacaoPrestadorServico( m_backupStream->read( 14 ) );
+                        aih->aihProcedimentosSecundarios( i )->setIndicadorDocumentoExecutor( m_backupStream->read( 1 ) );
+                        aih->aihProcedimentosSecundarios( i )->setIndentificacaoExecutor( m_backupStream->read( 15 ) );
+                        aih->aihProcedimentosSecundarios( i )->setCodigoProcedimento( m_backupStream->read( 10 ) );
+                        aih->aihProcedimentosSecundarios( i )->setQuantidadeProcedimentos( m_backupStream->read( 3 ) );
+                        aih->aihProcedimentosSecundarios( i )->setCompetencia( m_backupStream->read( 6 ) );
+                    }
+                }else
+                {
+                    for ( int i = 0; i < 9; ++i )
+                    {
+                        aih->aihProcedimentosSecundarios( i )->setIndicadorDocumentoProfissional( m_backupStream->read( 1 ) );
+                        aih->aihProcedimentosSecundarios( i )->setIdentificacaoProfissional( m_backupStream->read( 15 ) );
+                        aih->aihProcedimentosSecundarios( i )->setCodigoCBO( m_backupStream->read( 6 ) );
+                        aih->aihProcedimentosSecundarios( i )->setIndicadorEquipe( m_backupStream->read( 1 ) );
+                        aih->aihProcedimentosSecundarios( i )->setIndicadorPrestadorServico( m_backupStream->read( 1 ) );
+                        aih->aihProcedimentosSecundarios( i )->setIdentificacaoPrestadorServico( m_backupStream->read( 14 ) );
+                        aih->aihProcedimentosSecundarios( i )->setIndicadorDocumentoExecutor( m_backupStream->read( 1 ) );
+                        aih->aihProcedimentosSecundarios( i )->setIndentificacaoExecutor( m_backupStream->read( 15 ) );
+                        aih->aihProcedimentosSecundarios( i )->setCodigoProcedimento( m_backupStream->read( 10 ) );
+                        aih->aihProcedimentosSecundarios( i )->setQuantidadeProcedimentos( m_backupStream->read( 3 ) );
+                        aih->aihProcedimentosSecundarios( i )->setCompetencia( m_backupStream->read( 6 ) );
+                        aih->aihProcedimentosSecundarios(i)->setServico( m_backupStream->read(3));
+                        aih->aihProcedimentosSecundarios(i)->setClassificacao( m_backupStream->read(3));
+                    }
+                    //Filler adicionado
+                    m_backupStream->read( 19 ); //Filler
+                }
             }
 
             //UTI Neonatal
@@ -195,9 +263,53 @@ void LeitorBackup::inicializarAih( Aih* aih )
             aih->setGestacaoAltoRisco( m_backupStream->read( 1 ) );
 
             m_backupStream->read( 35 ); //Reservado
-            aih->setNumeroInscricaoGestantePreNatal( m_backupStream->read( 11 ) );
-            aih->setNumeroDocumentoPaciente( m_backupStream->read( 32 ) );
-            m_backupStream->read( 73 ); //Filler
+           //aih->setNumeroInscricaoGestantePreNatal( m_backupStream->read( 11 ) );
+            //aih->setNumeroDocumentoPaciente( m_backupStream->read( 32 ) );
+            //Telefone adicionado
+            //verificacao da data do backup
+
+            if(ano >= 2012)
+            {
+                // verifica se tá dentro do layout de agosto a novembro de 2012
+                if(ano == 2012 && (mes >= 8 && mes < 11)){
+                    aih->setNumeroInscricaoGestantePreNatal( m_backupStream->read( 11 ) );
+                    aih->setNumeroDocumentoPaciente( m_backupStream->read( 32 ) );
+                    aih->setTelefonePacDDD( m_backupStream->read(2));
+                    aih->setTelefonePaciente( m_backupStream->read(9));
+                    aih->setJustificativaCNSPac( m_backupStream->read(50));
+                    m_backupStream->read( 12 ); //Filler
+
+                // verifica se tá dentro do novo layout
+                }else if(ano == 2012 && mes >= 11){
+                    aih->setNumeroInscricaoGestantePreNatal( m_backupStream->read( 12 ) );
+                    aih->setNumeroDocumentoPaciente( m_backupStream->read( 32 ) );
+                    aih->setTelefonePacDDD( m_backupStream->read(2));
+                    aih->setTelefonePaciente( m_backupStream->read(9));
+                    aih->setJustificativaCNSPac( m_backupStream->read(50));
+                    m_backupStream->read( 11 ); //Filler
+                // verifica se tá dentro do novo layout
+                }else if (ano > 2012){
+                    aih->setNumeroInscricaoGestantePreNatal( m_backupStream->read( 12 ) );
+                    aih->setNumeroDocumentoPaciente( m_backupStream->read( 32 ) );
+                    aih->setTelefonePacDDD( m_backupStream->read(2));
+                    aih->setTelefonePaciente( m_backupStream->read(9));
+                    aih->setJustificativaCNSPac( m_backupStream->read(50));
+                    m_backupStream->read( 11 ); //Filler
+
+                //verifica se tá no layout antigo
+                }else{
+                    aih->setNumeroInscricaoGestantePreNatal( m_backupStream->read( 11 ) );
+                    aih->setNumeroDocumentoPaciente( m_backupStream->read( 32 ) );
+                     m_backupStream->read( 73 ); //Filler
+                }
+
+            //verifica se tá no layout antigo
+            }else{
+                aih->setNumeroInscricaoGestantePreNatal( m_backupStream->read( 11 ) );
+                aih->setNumeroDocumentoPaciente( m_backupStream->read( 32 ) );
+                 m_backupStream->read( 73 ); //Filler
+            }
+
             break;
         }
     case 4: //AIH de registro civil

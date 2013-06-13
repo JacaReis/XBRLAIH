@@ -34,6 +34,7 @@
 #include <QtXmlPatterns/QXmlQuery>
 #include <QtXmlPatterns/QXmlSerializer>
 #include <QXmlQuery>
+#include <QDebug>
 
 MainWindow::MainWindow( QWidget *parent )
     : QMainWindow( parent )
@@ -121,9 +122,28 @@ void MainWindow::on_gerarRelatorioPushButton_clicked()
                     new GeradorEstatistica( m_leitorBackup->aihs(),
                                             m_leitorCompetencia->procedimentos(),
                                             this );
+            int ano_c = m_geradorEstatistica->anoCompetencia();
+            int mes_c = m_geradorEstatistica->mesCompetencia();
+            int ano_l = m_geradorEstatistica->anoApresentacaoLote();
+            int mes_l = m_geradorEstatistica->mesApresentacaolote();
+
+            /*if(ano_c == ano_l && mes_c == mes_l){
+                qDebug() << "passou ";
+                qDebug() << ano_c;
+                qDebug() << ano_l;
+                qDebug() << mes_c;
+                qDebug() << mes_l;
+            }else{
+                qDebug() << "nao passou ";
+                qDebug() << ano_c;
+                qDebug() << ano_l;
+                qDebug() << mes_c;
+                qDebug() << mes_l;
+            }*/
 
             if( m_geradorEstatistica->datasConferem() )
             {
+
                 QString localizacaoInstancia = "instancia.xml";
 
                 if ( m_instanciadorXbrl )
@@ -141,10 +161,13 @@ void MainWindow::on_gerarRelatorioPushButton_clicked()
 
                 if ( m_instanciadorXbrl->criarXml() )
                 {
+
                     ui->saidaTextEdit->append( tr( "--- Instância XBRL criada" ) );
                     m_progressDialog->setLabelText( tr( "Instância XBRL criada..." ) );
                     m_progressDialog->setValue( 6 );
                     m_instanciadorXbrl->preencherXbrl();
+
+
                 }
                 else
                 {
@@ -264,6 +287,7 @@ void MainWindow::xbrlPreenchido()
 
     if ( aplicarFolhaEstilo( QString( "%1.html" ).arg( localizacaoSaida ), "html.xq" ) )
     {
+
         ui->continuarPushButton->setEnabled( true );
         ui->gerarRelatorioPushButton->setEnabled( false );
 
@@ -286,15 +310,20 @@ void MainWindow::slotDadosModificasdos()
     ui->gerarRelatorioPushButton->setEnabled( true );
 }
 
+// aplica a folha de estilo no Xbrl criado e também salva em pasta especifica
 bool MainWindow::aplicarFolhaEstilo( const QString localizacaoArquivoSaida, const QString localizacaoArquivoXq )
 {
     QFile xq( localizacaoArquivoXq );
 
     if( xq.exists() )
     {
-        QFile saidaFormatada( localizacaoArquivoSaida );
+
+        QString  name = QFileDialog::getSaveFileName(this);
+        QFile saidaFormatada(name );
+        QFile saidaFormatada2(localizacaoArquivoSaida);
 
         saidaFormatada.open( QIODevice::WriteOnly | QIODevice::Text );
+        saidaFormatada2.open( QIODevice::WriteOnly | QIODevice::Text );
 
         if( saidaFormatada.isOpen() )
         {
@@ -311,15 +340,21 @@ bool MainWindow::aplicarFolhaEstilo( const QString localizacaoArquivoSaida, cons
                     QXmlSerializer serializer( query, &saidaFormatada );
                     query.evaluateTo( &serializer );
 
+                    QXmlSerializer serializer2( query, &saidaFormatada2 );
+                    query.evaluateTo( &serializer2 );
+
                     xq.close();
                     saidaFormatada.close();
+                    saidaFormatada2.close();
                     return true;
                 }
 
                 xq.close();
+
             }
 
             saidaFormatada.close();
+            saidaFormatada2.close();
         }
     }
 
@@ -430,6 +465,7 @@ void MainWindow::on_continuarPushButton_clicked()
         }
 
         ui->continuarPushButton->setEnabled( !ui->gerarRelatorioPushButton->isEnabled() );
+
     }
         break;
     case 3:
